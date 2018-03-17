@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="24dp">
+
+        <FrameLayout
+            android:id="@+id/search_layout_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@color/transparent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_title_back" />
+
+        </FrameLayout>
+
+        <LinearLayout android:id="@+id/ll_layout_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/zk_edging_work_search"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/search_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/input_tip"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+
+            <TextView android:id="@+id/tv_clear"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/clear"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="搜索"
+            android:textColor="@color/black_micro"
+            android:textSize="13sp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_half"/>
+
+    <TextView android:id="@+id/tv_flesh_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/flesh_list"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_half"/>
+
+    <ListView android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</LinearLayout>

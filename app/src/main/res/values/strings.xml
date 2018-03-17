@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="flesh_list">刷新列表</string>
+    <string name="input_tip">请输入关键字</string>
+</resources>
