@@ -6,10 +6,13 @@ import android.os.HandlerThread;
 import android.os.Message;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.util.MyToast;
 import com.example.myapplication.util.StatusBarUtil;
+import com.example.myapplication.util.runnable.MainPageRunnable;
 
 public class MainActivity extends BaseCompatActivity {
 
@@ -18,6 +21,8 @@ public class MainActivity extends BaseCompatActivity {
     private Button mBtnSreach;
 
     private TextView mTvFlesh;
+
+    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +33,15 @@ public class MainActivity extends BaseCompatActivity {
 
         initView();
         initHandler();
+
+        postRunnable(0);
     }
 
     private void initView() {
         mEtSearch = findViewById(R.id.et_search);
         mBtnSreach = findViewById(R.id.btn_search);
         mTvFlesh = findViewById(R.id.tv_flesh_list);
+        mListView = findViewById(R.id.music_list);
     }
 
     private Handler mHandler, mHandlerT;
@@ -47,7 +55,11 @@ public class MainActivity extends BaseCompatActivity {
             public boolean handleMessage(Message message) {
                 switch (message.what) {
                     case 0:
+                        if (message.obj == null) {
+                            MyToast.getInstance(MainActivity.this).showCommonCenter("无数据，请点击刷新");
+                        } else {
 
+                        }
                         break;
                     default:
                         break;
@@ -57,11 +69,8 @@ public class MainActivity extends BaseCompatActivity {
         });
     }
 
-    private Runnable postRunnable = new Runnable() {
-        @Override
-        public void run() {
-
-        }
-    };
+    private void postRunnable(int type) {
+        mHandlerT.post(new MainPageRunnable(type, mHandler));
+    }
 
 }

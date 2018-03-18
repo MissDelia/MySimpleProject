@@ -37,4 +37,6 @@ dependencies {
     }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.alibaba:fastjson:1.2.33'
 }
