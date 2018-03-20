@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".util.MyApp"
         android:allowBackup="false"
@@ -25,7 +27,8 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" android:screenOrientation="portrait" android:exported="false" android:launchMode="singleTask" />
+
     </application>
 
 </manifest>
