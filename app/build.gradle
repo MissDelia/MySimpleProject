@@ -37,8 +37,8 @@ dependencies {
         exclude group: "com.android.support"
     }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
-    compile 'org.greenrobot:greendao:3.2.2'// 集成GreenDao
-    compile 'com.mcxiaoke.volley:library:1.0.19'// 集成Volley
-    compile 'com.alibaba:fastjson:1.2.33'// 集成FastJson
-    compile 'org.greenrobot:eventbus:3.1.1'// 集成EventBus
+    api 'org.greenrobot:greendao:3.2.2'// 集成GreenDao
+    api 'com.mcxiaoke.volley:library:1.0.19'// 集成Volley
+    api 'com.alibaba:fastjson:1.2.33'// 集成FastJson
+    api 'org.greenrobot:eventbus:3.1.1'// 集成EventBus
 }
