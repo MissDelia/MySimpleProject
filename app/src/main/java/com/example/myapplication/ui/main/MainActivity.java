@@ -1,4 +1,4 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.main;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -19,6 +19,7 @@ import com.example.myapplication.adapter.MainListAdapter;
 import com.example.myapplication.db.entity.MusicInfo;
 import com.example.myapplication.util.MyToast;
 import com.example.myapplication.util.StatusBarUtil;
+import com.example.myapplication.util.base.BaseCompatActivity;
 import com.example.myapplication.util.runnable.MainPageRunnable;
 
 import java.util.ArrayList;
@@ -39,6 +40,12 @@ public class MainActivity extends BaseCompatActivity implements View.OnClickList
     private RecyclerView.LayoutManager mLayoutManager;
 
     private List<MusicInfo> mList;
+
+    static {
+        System.loadLibrary("lib-c");
+    }
+
+    public native String getString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

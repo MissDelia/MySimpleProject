@@ -1,19 +1,16 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.loading;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
+import com.example.myapplication.ui.main.MainActivity;
 import com.example.myapplication.util.StatusBarUtil;
+import com.example.myapplication.util.base.BaseCompatActivity;
 
 public class LoadingActivity extends BaseCompatActivity {
 

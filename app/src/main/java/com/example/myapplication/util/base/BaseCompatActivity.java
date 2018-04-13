@@ -1,4 +1,4 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.util.base;
 
 import android.graphics.Color;
 import android.os.Build;
