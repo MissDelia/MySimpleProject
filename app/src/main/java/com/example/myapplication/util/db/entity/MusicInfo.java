@@ -1,4 +1,4 @@
-package com.example.myapplication.db.entity;
+package com.example.myapplication.util.db.entity;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;

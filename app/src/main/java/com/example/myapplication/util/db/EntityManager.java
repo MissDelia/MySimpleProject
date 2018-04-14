@@ -1,6 +1,6 @@
-package com.example.myapplication.db;
+package com.example.myapplication.util.db;
 
-import com.example.myapplication.db.dao.MusicInfoDao;
+import com.example.myapplication.util.db.dao.MusicInfoDao;
 import com.example.myapplication.util.MyApp;
 
 /**

@@ -4,8 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.myapplication.db.dao.DaoMaster;
-import com.example.myapplication.db.dao.DaoSession;
+import com.example.myapplication.util.db.dao.DaoMaster;
+import com.example.myapplication.util.db.dao.DaoSession;
 
 /**
  * Created by x5035 on 2018/3/17.

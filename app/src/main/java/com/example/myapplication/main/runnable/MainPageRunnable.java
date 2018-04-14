@@ -1,10 +1,10 @@
-package com.example.myapplication.util.runnable;
+package com.example.myapplication.main.runnable;
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.myapplication.db.EntityManager;
-import com.example.myapplication.db.entity.MusicInfo;
+import com.example.myapplication.util.db.EntityManager;
+import com.example.myapplication.util.db.entity.MusicInfo;
 
 import java.util.List;
 

@@ -1,11 +1,15 @@
 package com.example.myapplication.util.base;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.myapplication.util.MyToast;
 
 /**
  * Created by x5035 on 2018/3/15.
@@ -33,6 +37,30 @@ public abstract class BaseCompatActivity extends AppCompatActivity {
                 window.setAttributes(attributes);
             }
         }
+    }
+
+    /**
+     * 提示内容
+     *
+     * @param msg
+     */
+    public void showCommon(String msg){
+        MyToast.getInstance(this).showCommon(msg, Gravity.CENTER);
+    }
+
+    public void showCommonBottom(String msg){
+        MyToast.getInstance(this).showCommon(msg);
+    }
+
+    /**
+     * 跳转UI页面
+     * @param c 下一个UI类
+     * @param extras 传递参数
+     */
+    public void goIntent(Class<?> c,Bundle extras){
+        Intent intent = new Intent(this, c);
+        if (extras != null) intent.putExtras(extras);
+        startActivity(intent);
     }
 
 }

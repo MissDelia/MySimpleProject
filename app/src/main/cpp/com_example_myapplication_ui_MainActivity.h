@@ -12,7 +12,7 @@ extern "C" {
  * Method:    getString
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_example_myapplication_ui_main_MainActivity_getString
+JNIEXPORT jstring JNICALL Java_com_example_myapplication_main_ui_MainActivity_getString
   (JNIEnv *, jobject);
 
 #ifdef __cplusplus

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.loading;
+package com.example.myapplication.loading.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
-import com.example.myapplication.ui.main.MainActivity;
+import com.example.myapplication.main.ui.MainActivity;
 import com.example.myapplication.util.StatusBarUtil;
 import com.example.myapplication.util.base.BaseCompatActivity;
 

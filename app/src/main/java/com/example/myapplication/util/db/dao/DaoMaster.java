@@ -1,4 +1,4 @@
-package com.example.myapplication.db.dao;
+package com.example.myapplication.util.db.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

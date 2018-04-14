@@ -1,4 +1,4 @@
-package com.example.myapplication.adapter;
+package com.example.myapplication.main.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.db.entity.MusicInfo;
+import com.example.myapplication.util.db.entity.MusicInfo;
 
 import java.util.List;
 
