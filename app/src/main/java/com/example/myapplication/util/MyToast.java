@@ -3,6 +3,8 @@ package com.example.myapplication.util;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.example.myapplication.widgt.ToastTextView;
+
 /**
  * Created by x5035 on 2018/3/18.
  */

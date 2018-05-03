@@ -1,7 +1,30 @@
 package com.example.myapplication.util.base;
 
-public interface BasePresenter {
+import android.content.Context;
 
-    void start();
+public abstract class BasePresenter<V extends BaseView> {
 
+    private V baseView;
+
+    private Context mContext;
+
+    public BasePresenter(Context context) {
+        this.mContext = context;
+    }
+
+    public void bindView(V baseView) {
+        this.baseView = baseView;
+    }
+
+    public void detachView() {
+        baseView = null;
+    }
+
+    public V getView() {
+        return baseView;
+    }
+
+    public Context getmContext() {
+        return mContext;
+    }
 }

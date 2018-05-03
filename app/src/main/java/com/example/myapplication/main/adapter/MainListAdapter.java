@@ -22,8 +22,7 @@ public class MainListAdapter extends RecyclerView.Adapter {
 
     private Context mContext;
 
-    public MainListAdapter(List<MusicInfo> list, Context context) {
-        this.mList = list;
+    public MainListAdapter(Context context) {
         this.mContext = context;
     }
 
@@ -42,6 +41,7 @@ public class MainListAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((ViewHolder) holder).mTv.setText(mList.get(position).getMusicName());
+        ((ViewHolder) holder).itemView.setTag(mList.get(position).getId());
     }
 
     @Override

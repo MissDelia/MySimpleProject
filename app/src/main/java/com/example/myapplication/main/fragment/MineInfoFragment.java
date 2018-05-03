@@ -1,15 +1,20 @@
 package com.example.myapplication.main.fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapplication.R;
+import com.example.myapplication.main.presenter.MainPresenter;
 import com.example.myapplication.main.view.IFragmentView;
+import com.example.myapplication.util.MyApp;
+import com.example.myapplication.util.base.BaseFragment;
+import com.example.myapplication.util.db.entity.MusicInfo;
 
-public class MineInfoFragment extends Fragment implements IFragmentView {
+import java.util.List;
+
+public class MineInfoFragment extends BaseFragment<IFragmentView, MainPresenter> implements IFragmentView {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +29,17 @@ public class MineInfoFragment extends Fragment implements IFragmentView {
     }
 
     @Override
-    public void setPresenter(Object presenter) {
+    public MainPresenter createPresenter() {
+        return new MainPresenter(MyApp.getInstance());
+    }
+
+    @Override
+    public IFragmentView createView() {
+        return this;
+    }
+
+    @Override
+    public void onResult(List<MusicInfo> list) {
 
     }
 }
